@@ -7,6 +7,12 @@ import FeaturesPage from "./components/Feature";
 import StrongSimplePage from "./components/StrongSimple";
 import ClientsPartners from "./components/Clients";
 import TestimonialsSection from "./components/Testimonals";
+import LocationMapSection from "./components/Location"; 
+import ReadyToRider from "./components/ReadyToRider";
+import Footer from "./components/Footer";
+
+import './index.css';
+
 function App() {
   return (
     <div className="bg-black text-white">
@@ -42,7 +48,24 @@ function App() {
       <section id="testimonials">
         <TestimonialsSection />
       </section>
-    </div>
+
+      <section id="location-map">
+        <LocationMapSection />
+      </section>
+
+      <section id="ready-to-ride">
+        <ReadyToRider />
+      </section>
+
+    
+
+      <section id="footer">
+        <Footer />
+      </section>
+
+      
+
+      </div>
   );
 }
 

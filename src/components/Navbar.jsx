@@ -1,8 +1,8 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#1a1a1a] rounded-full px-8 py-3 flex items-center justify-between shadow-lg w-[90%] max-w-6xl">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#1a1a1a] rounded-full px-8 py-3 flex items-center justify-between shadow-lg w-[90%] max-w-9xl">
       {/* Left Logo */}
-      <div className="bg-[#e6ff00] rounded-full px-7 py-2 font-bold text-black text-xl">
+      <div className="bg-[#e6ff00] rounded-full px-9 py-2 font-bold text-black text-xl ">
         HCD
       </div>
 

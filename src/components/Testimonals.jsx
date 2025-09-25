@@ -39,7 +39,7 @@ const TestimonialsPage = () => {
         paddingRight: '40px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
+        alignItems: 'flex-end',
       }}>
         <img
           src="/user.png"
@@ -49,7 +49,7 @@ const TestimonialsPage = () => {
         <h2 style={{
           fontWeight: '900',
           fontSize: '2.8rem',
-          lineHeight: '4rem',
+          lineHeight: '3rem',
           color: '#000',
         }}>
           What Our  Users <br/> Say About Us
