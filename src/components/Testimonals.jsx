@@ -26,43 +26,51 @@ const TestimonialsPage = () => {
   return (
     <div style={{
       display: 'flex',
+      flexDirection: 'row',
       minHeight: '100vh',
       backgroundColor: 'white',
       fontFamily: 'Arial, sans-serif',
       padding: '40px',
       alignItems: 'center',
+      justifyContent: 'center',
+      gap: '20px',
+      flexWrap: 'wrap',
     }}>
       {/* Left Section - Logo and Text */}
       <div style={{
-        flex: 1,
+        flex: '1 1 300px',
         textAlign: 'center',
         paddingRight: '40px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-end',
+        alignItems: 'center',
+        maxWidth: '400px',
+        minWidth: '280px',
       }}>
         <img
           src="/user.png"
           alt="User logo"
-          style={{ width: 300, height: 300, marginBottom: 20, objectFit: 'contain' }}
+          style={{ width: '80%', maxWidth: 300, height: 'auto', marginBottom: 20, objectFit: 'contain' }}
         />
         <h2 style={{
           fontWeight: '900',
           fontSize: '2.8rem',
           lineHeight: '3rem',
           color: '#000',
+          textAlign: 'center',
         }}>
-          What Our  Users <br/> Say About Us
+          What Our  Users <br /> Say About Us
         </h2>
       </div>
 
       {/* Right Section - Testimonials with vertical infinite GSAP scroll */}
       <div style={{
-        flex: 2,
-        height: '320px', // container height according to recording
+        flex: '2 1 320px',
+        height: 320,
+        maxWidth: 600,
         overflow: 'hidden',
-        borderRadius: '14px',
-        boxShadow: '0 2px 8px',
+        borderRadius: 14,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
       }}>
         <div
           ref={sliderRef}
@@ -78,7 +86,7 @@ const TestimonialsPage = () => {
               src={imgSrc}
               alt={`Testimonial ${idx + 1}`}
               style={{
-                width: '50%',
+                width: '100%',
                 objectFit: 'cover',
                 padding: '12px 20px',
               }}
@@ -91,7 +99,7 @@ const TestimonialsPage = () => {
               src={imgSrc}
               alt={`Testimonial duplicate ${idx + 1}`}
               style={{
-                width: '50%',
+                width: '100%',
                 objectFit: 'cover',
                 padding: '12px 20px',
               }}

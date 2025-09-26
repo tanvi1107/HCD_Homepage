@@ -2,16 +2,47 @@ import React from "react";
 
 const Footer = () => (
   <footer style={{ background: "#212121", color: "#fff", width: "100%" }}>
-    <div style={{
-      display: "flex",
-      flexWrap: "wrap",
-      alignItems: "flex-start",
-      justifyContent: "space-between",
-      padding: "38px 40px 20px 40px",
-      gap: "36px"
-    }}>
+    <style>
+      {`
+        .footer-container {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 38px 40px 20px 40px;
+          gap: 36px;
+        }
+        .footer-section {
+          min-width: 140px;
+          flex: 1 1 200px;
+          margin-bottom: 10px;
+        }
+        @media (max-width: 900px) {
+          .footer-container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 35px 16px 16px 16px;
+          }
+          .footer-section {
+            min-width: 120px;
+            margin-bottom: 4px;
+          }
+        }
+        @media (max-width: 500px) {
+          .footer-container {
+            padding: 28px 6px 8px 6px;
+            gap: 8px;
+          }
+          .footer-section {
+            min-width: 0;
+          }
+        }
+      `}
+    </style>
+    <div className="footer-container">
       {/* Logo and Social */}
-      <div style={{ minWidth: 140, flex: 1, marginBottom: 10 }}>
+      <div className="footer-section" style={{ minWidth: 140 }}>
         <div style={{ fontSize: "2.15rem", fontWeight: 800, marginBottom: 18 }}>HCD</div>
         <div style={{ display: "flex", gap: 16, marginBottom: 8 }}>
           <a aria-label="Instagram" href="#"><svg width="22" height="22" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="6"/><circle cx="17" cy="7" r="1.2" fill="#fff"/></svg></a>
@@ -19,13 +50,13 @@ const Footer = () => (
         </div>
       </div>
       {/* Our Products */}
-      <div style={{ minWidth: 110, flex: 1, marginBottom: 10 }}>
-        <div style={{ fontWeight: 1000, marginBottom: 7,  }}>Our Products</div>
+      <div className="footer-section" style={{ minWidth: 110 }}>
+        <div style={{ fontWeight: 1000, marginBottom: 7 }}>Our Products</div>
         <div>NSP Cargo</div>
         <div>NSP Quick</div>
       </div>
       {/* Quick Links */}
-      <div style={{ minWidth: 170, flex: 1, marginBottom: 10 }}>
+      <div className="footer-section" style={{ minWidth: 170 }}>
         <div style={{ fontWeight: 1000, marginBottom: 7 }}>Quick Links</div>
         <div>Contact us</div>
         <div>Privacy policy</div>
@@ -33,7 +64,7 @@ const Footer = () => (
         <div>Shipping policy</div>
       </div>
       {/* Office Address */}
-      <div style={{ minWidth: 190, flex: 1, marginBottom: 10 }}>
+      <div className="footer-section" style={{ minWidth: 190 }}>
         <div style={{ fontWeight: 1000, marginBottom: 7 }}>Office Address</div>
         <div>
           Human Centered Design LLP.<br />

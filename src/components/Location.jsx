@@ -12,8 +12,8 @@ const LocationMapSection = () => (
       <div className="location-address">
         Tauru Road, Bilaspur<br />
         Village Patheri,<br />
-        Tehsil manesar,<br />
-        distt.gurugram ,<br />
+        Tehsil Manesar,<br />
+        Distt. Gurugram ,<br />
         Haryana 122413
       </div>
       <button className="location-btn">
@@ -41,7 +41,7 @@ const LocationMapSection = () => (
       .location-card {
         position: absolute;
         left: 8vw;
-        top: 150px;
+        top: 20vh;
         background: #fff;
         border-radius: 16px;
         box-shadow: 0 2px 16px rgba(0,0,0,0.07);
@@ -74,21 +74,58 @@ const LocationMapSection = () => (
         outline: none;
         border: none;
         font-size: 1.11rem;
-        padding: 16px 36px;
+        padding: 14px 32px;
         font-weight: 500;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        min-width: 160px;
       }
       .location-btn:hover {
         background: #222;
       }
       /* Responsive rules */
+      @media (max-width: 900px) {
+        .location-card {
+          left: 5vw;
+          top: 15vh;
+          padding: 28px 20px 24px 20px;
+          max-width: 80vw;
+          min-width: unset;
+        }
+        .location-card h3 {
+          font-size: 1.3rem;
+        }
+        .location-address {
+          font-size: 1rem;
+          margin-bottom: 24px;
+        }
+        .location-btn {
+          font-size: 1rem;
+          padding: 12px 28px;
+          min-width: 140px;
+        }
+        .map-location-root {
+          height: 450px;
+        }
+      }
       @media (max-width: 700px) {
         .location-card {
           left: 3vw;
-          top: 10px;
-          padding: 16px 8px;
-          max-width: 84vw;
+          top: 10vh;
+          padding: 18px 12px 16px 12px;
+          max-width: 90vw;
+        }
+        .location-card h3 {
+          font-size: 1.2rem;
+        }
+        .location-address {
+          font-size: 0.95rem;
+          margin-bottom: 20px;
+        }
+        .location-btn {
+          font-size: 0.95rem;
+          padding: 10px 26px;
+          min-width: 130px;
         }
         .map-location-root {
           height: 350px;
@@ -97,9 +134,21 @@ const LocationMapSection = () => (
       @media (max-width: 430px) {
         .location-card {
           left: 2vw;
-          top: 6px;
-          padding: 8px 4px;
-          max-width: 94vw;
+          top: 6vh;
+          padding: 12px 8px 12px 8px;
+          max-width: 95vw;
+        }
+        .location-card h3 {
+          font-size: 1.1rem;
+        }
+        .location-address {
+          font-size: 0.9rem;
+          margin-bottom: 16px;
+        }
+        .location-btn {
+          font-size: 0.9rem;
+          padding: 8px 20px;
+          min-width: 120px;
         }
         .map-location-root {
           height: 250px;
