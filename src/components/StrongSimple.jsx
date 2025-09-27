@@ -43,7 +43,7 @@ const StrongSimple = () => {
         <img
           src="image 6.png"
           alt="Strong Scooter"
-          className="absolute bottom-0 left-1 w-50 sm:w-[360px] object-contain select-none pointer-events-none"
+          className="absolute bottom-0 left-1 w-50 sm:w-[260px] object-contain select-none pointer-events-none"
         />
       </div>
     </section>
