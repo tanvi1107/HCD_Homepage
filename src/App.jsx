@@ -11,8 +11,6 @@ import LocationMapSection from "./components/Location";
 import ReadyToRider from "./components/ReadyToRider";
 import Footer from "./components/Footer";
 
-import './index.css';
-
 function App() {
   return (
     <div className="bg-black text-white">
