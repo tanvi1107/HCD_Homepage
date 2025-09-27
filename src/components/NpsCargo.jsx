@@ -9,18 +9,19 @@ const NpsCargo = () => {
       scooterRef.current,
       { x: "-200px", y: "150px", opacity: 0 },
       {
-        x: "0px",
+        x: "1550px",
         y: "0px",
-        opacity: 1,
-        duration: 2,
+        opacity: 10,
+        duration: 15,
         ease: "power3.out",
+        repeat:-1
       }
     );
   }, []);
 
   return (
     <section
-      className="relative bg-[#030303] text-white py-16 sm:py-24 px-4 sm:px-8 flex flex-col items-center justify-center overflow-hidden"
+      className="relative bg-[#ddd1d1] text-white py-16 sm:py-24 px-4 sm:px-8 flex flex-col items-center justify-center overflow-hidden"
       style={{
         clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
       }}
@@ -30,7 +31,7 @@ const NpsCargo = () => {
         ref={scooterRef}
         src="/Frame 7.png"
         alt="NPS Cargo Scooter"
-        className="absolute left-0 top-0 w-[300px] sm:w-[500px] md:w-[700px] lg:w-[800px] object-contain drop-shadow-2xl z-40"
+        className="absolute left-0 top-0 w-[300px] sm:w-[500px] md:w-[700px] lg:w-[800px] object-contain  z-40"
         style={{ transform: "translateY(-20%)" }}
       />
 

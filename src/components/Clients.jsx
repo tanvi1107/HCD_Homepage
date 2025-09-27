@@ -16,63 +16,27 @@ const clients = [
 ];
 
 const ClientGrid = () => (
-  <div style={{
-    backgroundColor: '#0000',
-    color: '#fff',
-    minHeight: '100vh',
-    fontFamily: 'sans-serif',
-    padding: '4vw 0',
-    width: '100vw',
-    maxWidth: '100vw',
-  }}>
-    <h1 style={{
-      textAlign: 'center',
-      fontSize: '6vw',        // scales on every device
-      fontWeight: '800',
-      marginBottom: '8vw',
-    }}>
+  <div className="bg-transparent text-white-900 min-h-screen font-sans py-10 w-screen max-w-full px-4">
+    <h1 className="text-center font-extrabold text-8xl mb-16">
       Our Clients & Partners
     </h1>
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)', // always 4 columns
-      gap: '4vw',           // gap scales
-      width: '80vw',        // grid area scales
-      margin: '0 auto 4vw auto',
-    }}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 max-w-6xl mx-auto">
       {clients.map(client => (
-        <div key={client.name} style={{
-          borderRadius: '1vw',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '7vw',
-        }}>
+        <div
+          key={client.name}
+          className="rounded-lg flex items-center justify-center min-h-27 p-4"
+        >
           <img
             src={`/${client.logo}`}
-            alt={client.name + " logo"}
-            style={{
-              maxWidth: '13vw',    // image scales
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain',
-            }}
+            alt={`${client.name} logo`}
+            className="max-w-full max-h-45 object-contain"
           />
         </div>
       ))}
     </div>
-    <div style={{ textAlign: 'center', marginTop: '4vw' }}>
-      <span style={{ fontSize: '1vw', marginRight: '1vw' }}>Want to partner with us?</span>
-      <button style={{
-        backgroundColor: '#f2ff36',
-        color: '#101010',
-        fontWeight: '600',
-        border: 'none',
-        borderRadius: '1vw',
-        padding: '1vw 4vw',
-        fontSize: '1.3vw',
-        cursor: 'pointer',
-      }}>
+    <div className="text-center mt-10">
+      <span className="text-sm sm:text-base mr-4">Want to partner with us?</span>
+      <button className="bg-yellow-400 text-white-900 font-semibold rounded-lg px-6 py-3 text-base cursor-pointer hover:bg-yellow-300 transition">
         Become a client
       </button>
     </div>
