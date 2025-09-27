@@ -15,7 +15,7 @@ import './index.css';
 
 function App() {
   return (
-<div className="bg-black text-white w-[1280px]">
+    <div className="bg-black text-white">
       {/* Fixed Navbar */}
       <Navbar />
 
@@ -57,10 +57,15 @@ function App() {
         <ReadyToRider />
       </section>
 
+    
+
       <section id="footer">
         <Footer />
       </section>
-    </div>
+
+      
+
+      </div>
   );
 }
 
