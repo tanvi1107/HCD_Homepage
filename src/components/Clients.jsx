@@ -16,78 +16,80 @@ const clients = [
 ];
 
 const ClientGrid = () => (
-  <div style={{
-    backgroundColor: '#0000',
-    color: '#fff',
-    minHeight: '100vh',
-    fontFamily: 'sans-serif',
-    padding: '40px 0'
-  }}>
-    <style>
-      {`
-        @media (max-width: 1200px) {
-          .client-grid-main { grid-template-columns: repeat(3, 1fr); }
-          .client-grid-title { font-size: 4rem; }
-        }
-        @media (max-width: 800px) {
-          .client-grid-main { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-          .client-grid-title { font-size: 2.4rem; margin-bottom: 40px; }
-        }
-        @media (max-width: 500px) {
-          .client-grid-main { grid-template-columns: 1fr; gap: 32px; width: 98%; }
-          .client-grid-title { font-size: 1.5rem; margin-bottom: 24px; }
-        }
-        .client-logo-img {
-          max-width: 160px;
-          width: 100%;
-          height: auto;
-          object-fit: contain;
-        }
-      `}
-    </style>
-    <h1 className="client-grid-title" style={{
-      textAlign: 'center',
-      fontSize: '6rem',
-      fontWeight: '800',
-      marginBottom: '80px'
-    }}>
+  <div
+    style={{
+      backgroundColor: '#0000',
+      color: '#fff',
+      minHeight: '100vh',
+      fontFamily: 'sans-serif',
+      padding: '40px 0',
+      width: '100vw',
+      maxWidth: '100vw',
+      overflowX: 'auto',
+    }}
+  >
+    <h1
+      style={{
+        textAlign: 'center',
+        fontSize: '6rem',
+        fontWeight: '800',
+        marginBottom: '80px',
+        minWidth: '600px',
+      }}
+    >
       Our Clients & Partners
     </h1>
-    <div className="client-grid-main" style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
-      gap: '80px',
-      width: '80%',
-      margin: '0 auto 48px auto'
-    }}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        gap: '80px',
+        width: '80vw', // make the grid as wide as desktop even on mobile
+        minWidth: '900px', // prevent stacking/column shrinking
+        margin: '0 auto 48px auto',
+        overflowX: 'auto',
+      }}
+    >
       {clients.map(client => (
-        <div key={client.name} style={{
-          borderRadius: '14px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '100px'
-        }}>
+        <div
+          key={client.name}
+          style={{
+            borderRadius: '14px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '100px',
+          }}
+        >
           <img
             src={`/${client.logo}`}
             alt={client.name + " logo"}
-            className="client-logo-img"
+            style={{
+              maxWidth: '160px',
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain',
+            }}
           />
         </div>
       ))}
     </div>
     <div style={{ textAlign: 'center', marginTop: '40px' }}>
-      <span style={{ fontSize: '1.1rem', marginRight: '16px' }}>Want to partner with us?</span>
-      <button style={{
-        backgroundColor: '#f2ff36',
-        color: '#101010',
-        fontWeight: '600',
-        border: 'none',
-        borderRadius: '6px',
-        padding: '12px 34px',
-        fontSize: '1.1rem',
-        cursor: 'pointer',
-      }}>
+      <span style={{ fontSize: '1.1rem', marginRight: '16px' }}>
+        Want to partner with us?
+      </span>
+      <button
+        style={{
+          backgroundColor: '#f2ff36',
+          color: '#101010',
+          fontWeight: '600',
+          border: 'none',
+          borderRadius: '6px',
+          padding: '12px 34px',
+          fontSize: '1.1rem',
+          cursor: 'pointer',
+        }}
+      >
         Become a client
       </button>
     </div>
