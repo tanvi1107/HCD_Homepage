@@ -15,7 +15,7 @@ import './index.css';
 
 function App() {
   return (
-    <div className="bg-black text-white min-w-[1280px] mx-auto">
+<div className="bg-black text-white w-[1280px]">
       {/* Fixed Navbar */}
       <Navbar />
 
