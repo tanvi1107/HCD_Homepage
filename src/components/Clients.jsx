@@ -16,56 +16,43 @@ const clients = [
 ];
 
 const ClientGrid = () => (
-  <div
-    style={{
-      backgroundColor: '#0000',
-      color: '#fff',
-      minHeight: '100vh',
-      fontFamily: 'sans-serif',
-      padding: '40px 0',
-      width: '100vw',
-      maxWidth: '100vw',
-      overflowX: 'auto',
-    }}
-  >
-    <h1
-      style={{
-        textAlign: 'center',
-        fontSize: '6rem',
-        fontWeight: '800',
-        marginBottom: '80px',
-        minWidth: '600px',
-      }}
-    >
+  <div style={{
+    backgroundColor: '#0000',
+    color: '#fff',
+    minHeight: '100vh',
+    fontFamily: 'sans-serif',
+    padding: '4vw 0',
+    width: '100vw',
+    maxWidth: '100vw',
+  }}>
+    <h1 style={{
+      textAlign: 'center',
+      fontSize: '6vw',        // scales on every device
+      fontWeight: '800',
+      marginBottom: '8vw',
+    }}>
       Our Clients & Partners
     </h1>
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '80px',
-        width: '80vw', // make the grid as wide as desktop even on mobile
-        minWidth: '900px', // prevent stacking/column shrinking
-        margin: '0 auto 48px auto',
-        overflowX: 'auto',
-      }}
-    >
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, 1fr)', // always 4 columns
+      gap: '4vw',           // gap scales
+      width: '80vw',        // grid area scales
+      margin: '0 auto 4vw auto',
+    }}>
       {clients.map(client => (
-        <div
-          key={client.name}
-          style={{
-            borderRadius: '14px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100px',
-          }}
-        >
+        <div key={client.name} style={{
+          borderRadius: '1vw',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '7vw',
+        }}>
           <img
             src={`/${client.logo}`}
             alt={client.name + " logo"}
             style={{
-              maxWidth: '160px',
+              maxWidth: '13vw',    // image scales
               width: '100%',
               height: 'auto',
               objectFit: 'contain',
@@ -74,22 +61,18 @@ const ClientGrid = () => (
         </div>
       ))}
     </div>
-    <div style={{ textAlign: 'center', marginTop: '40px' }}>
-      <span style={{ fontSize: '1.1rem', marginRight: '16px' }}>
-        Want to partner with us?
-      </span>
-      <button
-        style={{
-          backgroundColor: '#f2ff36',
-          color: '#101010',
-          fontWeight: '600',
-          border: 'none',
-          borderRadius: '6px',
-          padding: '12px 34px',
-          fontSize: '1.1rem',
-          cursor: 'pointer',
-        }}
-      >
+    <div style={{ textAlign: 'center', marginTop: '4vw' }}>
+      <span style={{ fontSize: '1vw', marginRight: '1vw' }}>Want to partner with us?</span>
+      <button style={{
+        backgroundColor: '#f2ff36',
+        color: '#101010',
+        fontWeight: '600',
+        border: 'none',
+        borderRadius: '1vw',
+        padding: '1vw 4vw',
+        fontSize: '1.3vw',
+        cursor: 'pointer',
+      }}>
         Become a client
       </button>
     </div>
